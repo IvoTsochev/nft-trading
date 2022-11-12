@@ -15,12 +15,13 @@ export class NavComponent implements OnInit {
     this.router.navigate(['/', 'index'])
   }
   goToAboutUs() {
-    this.router.navigate(['/', 'aboutUs'])
+    this.router.navigate(['/', 'aboutus'])
   }
   goToCollection() {
     this.router.navigate(['/', 'collection'])
   }
   goToLogin() {
+    console.log('goToLogin')
     this.router.navigate(['/', 'login'])
   }
   goToSignUp() {
