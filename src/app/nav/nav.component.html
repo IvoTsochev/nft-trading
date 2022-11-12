@@ -1,0 +1,23 @@
+
+<div class="flex justify-between">
+  <img src="../../assets/images/logo.png" alt="headless_logo" class="w-[6%]">
+  <ul class="flex justify-between p-8 items-center gap-6 w-[50%]">
+    <li class="cursor-pointer">
+      <a (click)="goToIndex()">Home</a>
+    </li>
+    <li class="cursor-pointer">
+      <a (click)="goToAboutUs()">About Us</a>
+    </li>
+    <li class="cursor-pointer">
+      <a (click)="goToCollection()">Collection</a>
+    </li>
+    <li class="cursor-pointer">
+      <a (click)="goToLogin()">Login</a>
+    </li>
+    <li class="cursor-pointer bg-[#1e293b] py-2 px-4 rounded-md">
+      <a (click)="goToSignUp()">SignUp</a>
+    </li>
+  </ul>
+</div>
+  
+<router-outlet> </router-outlet>
