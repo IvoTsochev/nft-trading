@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core'
-import {Router} from '@angular/router'
-import {ModalService} from '../services/modal.service'
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
+import { ModalService } from '../services/modal.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,22 +9,17 @@ import {ModalService} from '../services/modal.service'
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  constructor(private router: Router, public modal: ModalService) {}
 
-  ngOnInit(): void {}
+  isAuthenticated = false;
 
-  // goToIndex() {
-  //   this.router.navigate(['/', 'index'])
-  // }
-  // goToAboutUs() {
-  //   this.router.navigate(['/', 'aboutus'])
-  // }
-  // goToCollection() {
-  //   this.router.navigate(['/', 'collection'])
-  // }
-  // goToSignUp() {
-  //   this.router.navigate(['/', 'signup'])
-  // }
+  constructor(
+    private router: Router,
+    public modal: ModalService,
+    public auth: AuthService
+  ) {
+  }
+
+  ngOnInit(): void { }
 
   openModal($event: Event) {
     $event.preventDefault()

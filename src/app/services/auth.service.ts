@@ -12,14 +12,14 @@ import { map } from 'rxjs/operators';
 export class AuthService {
 
   private usersCollection: AngularFirestoreCollection<IUser>
-  public isAuthenticatetd$: Observable<boolean>
+  public isAuthenticated$: Observable<boolean>
 
   constructor(
     private auth: AngularFireAuth,
     private db: AngularFirestore
   ) {
     this.usersCollection = db.collection('users')
-    this.isAuthenticatetd$ = auth.user.pipe(
+    this.isAuthenticated$ = auth.user.pipe(
       map(user => !!user)
     )
   }
