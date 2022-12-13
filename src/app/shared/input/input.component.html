@@ -20,4 +20,7 @@ duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400" 
   <p *ngIf="control.errors?.max" class="text-red-400">
     Sorry, you're too old. Max age is {{ control.errors?.max.max }}
   </p>
+  <p *ngIf="control.errors?.noMatch" class="text-red-400">
+    Passwords do not match
+  </p>
 </ng-container>
