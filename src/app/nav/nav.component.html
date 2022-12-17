@@ -5,20 +5,21 @@
   </a>
 
   <ul class="flex justify-between p-8 items-center gap-6 w-[50%]">
-    <li class="cursor-pointer hover:text-[#1e293b] hover:font-extrabold" [routerLinkActive]="'active'">
+    <li class="cursor-pointer hover:text-[#1e293b] hover:font-extrabold" [routerLinkActive]="'active'"
+      [routerLinkActiveOptions]="{ exact: true }">
       <a routerLink="/">
         Home
       </a>
     </li>
 
     <li class="cursor-pointer hover:text-[#1e293b] hover:font-extrabold transition-all" [routerLinkActive]="'active'">
-      <a routerLink="collection">
+      <a routerLink="/collection">
         Collection
       </a>
     </li>
     <li *ngIf="!(auth.isAuthenticated$ | async)"
       class="cursor-pointer hover:text-[#1e293b] hover:font-extrabold transition-all" [routerLinkActive]="'active'">
-      <a routerLink="aboutus">
+      <a routerLink="/aboutus">
         About Us
       </a>
     </li>
@@ -31,12 +32,12 @@
     </li>
     <ng-template #authLinks>
       <li class="cursor-pointer hover:text-[#1e293b] hover:font-extrabold transition-all" [routerLinkActive]="'active'">
-        <a routerLink="collection">
+        <a routerLink="/manage">
           Manage
         </a>
       </li>
       <li class="cursor-pointer hover:text-[#1e293b] hover:font-extrabold transition-all" [routerLinkActive]="'active'">
-        <a routerLink="collection">
+        <a routerLink="/upload">
           Upload
         </a>
       </li>
@@ -46,7 +47,7 @@
         </a>
       </li>
       <li class="cursor-pointer hover:text-[#1e293b] hover:font-extrabold transition-all" [routerLinkActive]="'active'">
-        <a (click)="logout($event)">
+        <a (click)="auth.logout($event)">
           Logout
         </a>
       </li>
@@ -55,5 +56,3 @@
   </ul>
 
 </div>
-
-<router-outlet> </router-outlet>
