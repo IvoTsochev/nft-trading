@@ -13,6 +13,8 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ImageModule } from './image/image.module';
+import { NftComponent } from './nft/nft.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,15 +23,17 @@ import { ImageModule } from './image/image.module';
     AboutUsComponent,
     CollectionComponent,
     IndexComponent,
+    NftComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     UserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
     ImageModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

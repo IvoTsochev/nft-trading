@@ -5,7 +5,6 @@ import { ImageRoutingModule } from './image-routing.module';
 import { ManageComponent } from './manage/manage.component';
 import { UploadComponent } from './upload/upload.component';
 
-
 @NgModule({
   declarations: [
     ManageComponent,

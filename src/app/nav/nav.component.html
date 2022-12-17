@@ -32,7 +32,7 @@
     </li>
     <ng-template #authLinks>
       <li class="cursor-pointer hover:text-[#1e293b] hover:font-extrabold transition-all" [routerLinkActive]="'active'">
-        <a routerLink="/manage">
+        <a routerLink="/manage" [queryParams]="{ sort: '1' }">
           Manage
         </a>
       </li>
