@@ -20,7 +20,7 @@ let appInitialized = false;
 firebase.auth().onAuthStateChanged(() => {
   if (!appInitialized) {
     platformBrowserDynamic().bootstrapModule(AppModule)
-      .catch(err => console.error(err));
+      .catch(err => console.error('fockin error msg => ', err));
   }
 
   appInitialized = true;

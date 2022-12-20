@@ -1,4 +1,4 @@
-<section class="relative overflow-hidden mb-2">
+<section class="relative overflow-hidden mb-2 ">
   <div class="container mx-auto relative z-50">
     <div class="text-center px-20 py-60 w-full md:w-8/12 mx-auto">
       <h1 class="text-7xl font-bold uppercase mb-2">Get yourself an NFT Monster</h1>
@@ -12,226 +12,57 @@
   <img src="../../assets/images/header_monster.png" alt="" class="absolute top-0 right-[25%]">
 </section>
 
-<div class="flex items-center">
-  <h2 class="text-4xl w-[15%] font-bold">Most <span class="text-[#E449A3]">Popular</span></h2>
-  <div class="h-1 bg-white w-full"></div>
+<div *ngIf="nfts.length">
+  <div class="flex items-center">
+    <h2 class="text-4xl w-[15%] font-bold">Most <span class="text-[#E449A3]">Popular</span></h2>
+    <div class="h-1 bg-white w-full"></div>
+  </div>
+
+
+  <section class="container mx-auto">
+    <h1 class="uppercase text-center text-4xl grid mt-20 mb-12 items-center gap-8 tracking-widest latest">Latest</h1>
+
+    <!-- Clips List -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <a href="#" *ngFor="let nft of nfts"
+        class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+        <!-- Image -->
+        <img class="card-img-top rounded-tl-2xl w-full" src="{{ nft.url }}">
+
+        <!-- Shape -->
+        <div class="relative">
+          <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
+            <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+              <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
+                style="transform-origin: top center; transform: scale(2);">
+                <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div class="p-8">
+
+          <!-- Heading -->
+          <h2 class="text-3xl mb-2">
+            {{ nft.title }}
+          </h2>
+
+          <!-- Name & Date -->
+          <p class="mb-0">
+            <span class="text-gray-400">Uploaded by:</span>
+            &#183; {{ nft.displayName }}
+          </p>
+
+        </div>
+
+      </a>
+    </div>
+  </section>
 </div>
 
-
-<section class="container mx-auto">
-  <h1 class="uppercase text-center text-4xl grid mt-20 mb-12 items-center gap-8 tracking-widest latest">Latest</h1>
-
-  <!-- Clips List -->
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-    <a href="#"
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-
-      <!-- Image -->
-      <img class="card-img-top rounded-tl-2xl w-full" src="../../assets/images/header_monster.png">
-
-      <!-- Shape -->
-      <div class="relative">
-        <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
-          <div class="absolute bottom-full w-full pb-5 overflow-hidden">
-            <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
-              style="transform-origin: top center; transform: scale(2);">
-              <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Body -->
-      <div class="p-8">
-
-        <!-- Heading -->
-        <h2 class="text-3xl mb-2">
-          NFT Monster #1
-        </h2>
-
-        <!-- Name & Date -->
-        <p class="mb-0">
-          Ivo Tsochev &#183;
-          <span class="text-gray-400">November 31, 2022</span>
-        </p>
-
-      </div>
-
-    </a>
-    <a href="#"
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-
-      <!-- Image -->
-      <img class="card-img-top rounded-tl-2xl w-full" src="../../assets/images/header_monster.png">
-
-      <!-- Shape -->
-      <div class="relative">
-        <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
-          <div class="absolute bottom-full w-full pb-5 overflow-hidden">
-            <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
-              style="transform-origin: top center; transform: scale(2);">
-              <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Body -->
-      <div class="p-8">
-
-        <!-- Heading -->
-        <h2 class="text-3xl mb-2">
-          NFT Monster #2
-        </h2>
-
-        <!-- Name & Date -->
-        <p class="mb-0">
-          Ivo Tsochev &#183;
-          <span class="text-gray-400">November 31, 2022</span>
-        </p>
-
-      </div>
-
-    </a>
-    <a href="#"
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-
-      <!-- Image -->
-      <img class="card-img-top rounded-tl-2xl w-full" src="../../assets/images/header_monster.png">
-
-      <!-- Shape -->
-      <div class="relative">
-        <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
-          <div class="absolute bottom-full w-full pb-5 overflow-hidden">
-            <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
-              style="transform-origin: top center; transform: scale(2);">
-              <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Body -->
-      <div class="p-8">
-
-        <!-- Heading -->
-        <h2 class="text-3xl mb-2">
-          NFT Monster #3
-        </h2>
-
-        <!-- Name & Date -->
-        <p class="mb-0">
-          Ivo Tsochev &#183;
-          <span class="text-gray-400">November 31, 2022</span>
-        </p>
-
-      </div>
-
-    </a>
-    <a href="#"
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-
-      <!-- Image -->
-      <img class="card-img-top rounded-tl-2xl w-full" src="../../assets/images/header_monster.png">
-
-      <!-- Shape -->
-      <div class="relative">
-        <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
-          <div class="absolute bottom-full w-full pb-5 overflow-hidden">
-            <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
-              style="transform-origin: top center; transform: scale(2);">
-              <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Body -->
-      <div class="p-8">
-
-        <!-- Heading -->
-        <h2 class="text-3xl mb-2">
-          NFT Monster #4
-        </h2>
-
-        <!-- Name & Date -->
-        <p class="mb-0">
-          Ivo Tsochev &#183;
-          <span class="text-gray-400">November 31, 2022</span>
-        </p>
-
-      </div>
-
-    </a>
-    <a href="#"
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-
-      <!-- Image -->
-      <img class="card-img-top rounded-tl-2xl w-full" src="../../assets/images/header_monster.png">
-
-      <!-- Shape -->
-      <div class="relative">
-        <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
-          <div class="absolute bottom-full w-full pb-5 overflow-hidden">
-            <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
-              style="transform-origin: top center; transform: scale(2);">
-              <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Body -->
-      <div class="p-8">
-
-        <!-- Heading -->
-        <h2 class="text-3xl mb-2">
-          NFT Monster #5
-        </h2>
-
-        <!-- Name & Date -->
-        <p class="mb-0">
-          Ivo Tsochev &#183;
-          <span class="text-gray-400">November 31, 2022</span>
-        </p>
-
-      </div>
-
-    </a>
-    <a href="#"
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-
-      <!-- Image -->
-      <img class="card-img-top rounded-tl-2xl w-full" src="../../assets/images/header_monster.png">
-
-      <!-- Shape -->
-      <div class="relative">
-        <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
-          <div class="absolute bottom-full w-full pb-5 overflow-hidden">
-            <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
-              style="transform-origin: top center; transform: scale(2);">
-              <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Body -->
-      <div class="p-8">
-
-        <!-- Heading -->
-        <h2 class="text-3xl mb-2">
-          NFT Monster #6
-        </h2>
-
-        <!-- Name & Date -->
-        <p class="mb-0">
-          Ivo Tsochev &#183;
-          <span class="text-gray-400">November 31, 2022</span>
-        </p>
-
-      </div>
-
-    </a>
-  </div>
-</section>
+<div *ngIf="!nfts.length" class="text-center w-full pb-[20rem]">
+  <h2 class="text-4xl font-bold">Login to see the NFT Monsters</h2>
+</div>

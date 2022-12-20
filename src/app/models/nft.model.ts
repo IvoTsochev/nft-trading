@@ -1,6 +1,7 @@
 import firebase from 'firebase/compat/app';
 
 export default interface INft {
+  docID?: string;
   uid: string;
   displayName: string;
   title: string;
